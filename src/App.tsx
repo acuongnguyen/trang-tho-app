@@ -6,12 +6,16 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Login } from './pages/Account';
 import { PrivateRoute } from './components';
 import { Admin } from './pages/Admin/Admin';
+import { AccountRoute } from './components/AccountRoute';
 
 function App() {
   return (
     <div className="App" id="wrapper">
       <Router>
         <Switch>
+          <AccountRoute>
+            <Login />
+          </AccountRoute>
           <PrivateRoute>
             <Admin />
           </PrivateRoute >
